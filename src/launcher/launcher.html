@@ -1,0 +1,76 @@
+<head>
+    <title>Kirka Client Launcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <div id="particles-js">
+            <canvas class="particles-js-canvas-el" width="2015" height="1300" style="width: 100%; height: 100%;"></canvas>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="mode">
+                    <span class="tooltip">Boost In-game Performance</span>
+                    <div>Performance Mode</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+                <div class="top-wrapper">
+                    <div class="patch-notes" id="patch-notes">
+                        <div class="title">
+                            Patch Notes<span></span>
+                        </div>
+                    </div>
+                    <div class="right-wrapper">
+                        <div class="right-content">
+                            <div class="logo">
+                                <img src="static/KirkaClient.png">
+                            </div>
+                            <div class="logo-title">Kirka Client</div>
+                            <div class="button-container">
+                                <button id="client-website-btn">Website
+                                    <span class="tooltip">Vist our site</span>
+                                </button>
+                                <button id="client-discord-btn">Discord
+                                    <span class="tooltip">Join our Discord</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-wrapper">
+                    <div class="progress-wrapper">
+                        <div class="progress-top">
+                            <span id="progress-text"></span>
+                            <div class="warning" id="progress-warning"></div>
+                        </div>
+                        <div class="progress-line">
+                            <div class="progress-amount" id="progress-amount"></div>
+                            <div class="progress" id="progress-bar" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="right-buttons">
+                        <button class="cache" id="clear-cache">Clear Cache
+                            <span class="tooltip">Clear cache and restart</span>
+                        </button>
+                        <button class="launch" id="launch-client">Launch
+                            <span class="tooltip">Launch KirkaClient</span>
+                        </button>
+                        <button class="settings" id="launch-settings">
+                            <span class="tooltip">Client Settings</span>
+                            <span class="material-icons-round">settings</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div class="background-image"></div>
+        </div>
+    </div>
+</body>

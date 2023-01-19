@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <title>Plugins Store</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script src="./plugins.js"></script>
+    <link href="./index.css" rel="stylesheet">
+    <script src="./particles.js"></script>
+    <script src="./app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="top-bar">
+      <nav>
+        <ul>
+          <li><a href="settings.html"><span id="settingsNavIcon" class="material-icons">settings</span>Settings</a></li>
+          <li><a href=""><span id="pluginsNavIcon" class="material-icons">extension</span>Plugins</a></li>
+        </ul>
+      </nav>
+      <div class="heading">
+        <h1><span id="storeIcon" class="material-icons">store</span> KirkaClient Plugins Store</h1>
+      </div>
+    </div>
+    <div class="main">
+      <div id="particles-js">
+      </div>
+      <div class="plugin-frame">
+        <button type="button" class="collapsible">
+        <span class="material-icons md-48" style="font-size: x-large;">arrow_drop_down</span> View Popular
+        </button>
+        <div class="frame-content">
+        </div>
+      </div>
+      <div class="plugin-frame">
+        <button type="button" class="collapsible">
+        <span class="material-icons md-48" style="font-size: x-large;">arrow_drop_down</span> View Installed
+        </button>
+        <div class="frame-content">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

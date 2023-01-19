@@ -1,0 +1,528 @@
+@import url(https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+body {
+  font-family: 'Exo 2';
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+::-webkit-scrollbar-thumb {
+  background: #e76f77;
+  border-radius: 0.15em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e7888e;
+}
+::selection {
+  background-color: transparent;
+}
+img {
+  width: 100%;
+}
+button {
+  all: unset;
+}
+.app {
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 3;
+}
+.background {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  z-index: -200;
+}
+.background-image {
+  background: url(https://media.discordapp.net/attachments/933321299353280532/989610198354255882/kirka-dark.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(0.8);
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  z-index: -19;
+  opacity: 0.7;
+}
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(58, 65, 78, 0.5) 0%,
+    rgba(29, 34, 44, 1) 100%
+  );
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.bottom-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background: #1d2129de;
+  height: 5em;
+  width: 100%;
+  bottom: 0;
+}
+.right-buttons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  margin-right: 1em;
+}
+.right-buttons > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-buttons > .launch {
+  color: white;
+  font-weight: bold;
+  background: hsl(356, 71%, 67%);
+  height: 3em;
+  width: 6em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+.right-buttons > .launch:hover {
+  color: hsl(228, 92%, 61%);
+  width: 7em;
+  background: #00000020;
+}
+.right-buttons > .launch .tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: #fff;
+  text-align: center;
+  padding: 0.25em 0.5rem;
+  border-radius: 0.25em;
+  position: absolute;
+  z-index: 1;
+  top: -2em;
+}
+.right-buttons > .launch:hover .tooltip {
+  visibility: visible;
+}
+.right-buttons > .cache {
+  color: white;
+  font-weight: bold;
+  background: hsl(245, 100%, 77%);
+  height: 3em;
+  width: 6em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: all ease 0.25s;
+  margin-right: 0.9em;
+}
+.right-buttons > .cache:hover {
+  color: hsl(228, 92%, 61%);
+  width: 7em;
+  background: #00000020;
+}
+.right-buttons > .cache .tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: #fff;
+  text-align: center;
+  padding: 0.25em 0.5rem;
+  border-radius: 0.25em;
+  position: absolute;
+  z-index: 1;
+  top: -2em;
+}
+.right-buttons > .cache:hover .tooltip {
+  visibility: visible;
+}
+.right-buttons > .settings .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.25em 0;
+  border-radius: 0.25em;
+  position: absolute;
+  font-size: 1em;
+  z-index: 1;
+  top: -2em;
+  left: 8em;
+}
+.right-buttons > .settings:hover .tooltip {
+  visibility: visible;
+}
+.settings > span {
+  color: white;
+  font-size: 2em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: color ease 0.25s, transform ease 0.25s;
+}
+.settings > span:hover {
+  color: hsl(356, 71%, 67%);
+  transform: scale(1.2) rotate(15deg);
+}
+.top-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: calc(100% - 7em);
+  width: 100%;
+  top: 1em;
+}
+.patch-notes {
+  width: 50em;
+  height: 100%;
+  margin: 1em;
+  background: linear-gradient(
+    45deg,
+    hsla(216, 16%, 18%, 0.877) 0%,
+    hsla(222, 22%, 15%, 0.87) 100%
+  );
+  border-radius: 0.5em;
+  overflow-x: hidden;
+  margin-top: unset;
+}
+.title {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+  margin-left: 0.25em;
+}
+.patch-info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  margin: 1em;
+}
+.update-v,
+.newest {
+  color: hsl(356, 71%, 67%);
+  font-weight: 600;
+  text-transform: capitalize;
+  background: #00000020;
+  padding: 0.1em 0.25em;
+  border-radius: 0.25em;
+}
+.patch-info > span {
+  margin: 0 0.25em;
+}
+.update-date {
+  opacity: 0.85;
+}
+.newest {
+  color: hsl(130, 71%, 67%);
+  margin-left: 1em;
+}
+.patch-notes-content {
+  color: hsl(226, 6%, 41%);
+}
+.patch-notes-wrapper {
+  border-bottom: 1px dashed hsl(226, 6%, 41%);
+  margin: 1em;
+  min-height: 3em;
+  max-height: 3em;
+  overflow: hidden;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+.patch-notes-wrapper:hover {
+  transform: scale(1.05);
+  max-height: 25em;
+}
+.patch-notes > div:nth-child(2) {
+  min-height: 9em;
+}
+.right-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40em;
+  height: 100%;
+  margin: 1em;
+  overflow-x: hidden;
+  margin-top: unset;
+  margin-left: unset;
+}
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo {
+  width: 6em;
+  height: 6em;
+  margin-bottom: 0.5em;
+}
+.logo-title {
+  color: white;
+  font-size: 3em;
+  font-weight: 600;
+  text-shadow: 2px 2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000,
+    -2px -2px 0px #000000;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.button-container > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  background: hsl(356, 71%, 67%);
+  height: 2em;
+  width: 6em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: all ease 0.25s;
+  margin: 0.5em 0.25em;
+}
+.button-container > button:hover {
+  color: hsl(228, 92%, 61%);
+  width: 7em;
+  background: #00000020;
+}
+.button-container > button .tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.25em 0.25em;
+  border-radius: 0.25em;
+  position: absolute;
+  font-size: 1em;
+  z-index: 1;
+  bottom: 10em;
+  transform: scale(0.8);
+}
+.button-container > button:hover .tooltip {
+  visibility: visible;
+}
+.progress-wrapper {
+  position: relative;
+  width: 45em;
+}
+.progress-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(
+    45deg,
+    hsla(216, 16%, 18%, 0.877) 0%,
+    hsla(222, 22%, 15%, 0.87) 100%
+  );
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.2rem;
+  border: 1px solid #2b303a;
+  margin-left: 1em;
+}
+.progress {
+  background-color: #e76f77;
+  border-radius: 12px;
+  height: 1.2rem;
+  transition: width 1s linear;
+}
+.progress-top {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  font-size: 1.1em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  text-transform: capitalize;
+}
+.warning {
+  font-size: 0.875em;
+  color: hsl(356, 71%, 67%);
+  font-weight: 600;
+  text-transform: capitalize;
+  background: #00000020;
+  padding: 0.1em 0.25em;
+  border-radius: 0.25em;
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+.warning:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.progress-amount {
+  position: absolute;
+  font-weight: 600;
+  color: white;
+  padding: 0.1em 0.25em;
+  border-radius: 0.25em;
+  right: 0;
+}
+.mode {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 10;
+  background: #00000020;
+  padding: 0.1em 0.5em;
+  padding-left: 0.8em;
+  border-radius: 0.5em;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  transform: scale(0.5);
+  top: 0;
+  left: 0;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000046;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.mode .tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.329);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.25em 0.25em;
+  border-radius: 0.25em;
+  position: absolute;
+  font-size: 1em;
+  z-index: 1;
+  bottom: -1.8em;
+  transform: scale(0.8);
+  width: 14em;
+}
+.mode:hover .tooltip {
+  visibility: visible;
+}
